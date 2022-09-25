@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, Helvetica, '微軟正黑體', sans-serif, Times, serif;
+    font-size: 18px;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+// tool
+section {
+    position: relative;
+    padding: 5% 20vw;
+    width: 60vw;
+    height: 80vh;
+}
+
+.img-resp {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+// navegation
+nav {
+    position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    top: 0;
+    padding: 2% 10% 0;
+    z-index: 1;
+    background-color: rgb(14, 28, 79);
+
+    .logo {
+        position: relative;
+        display: inline-block;
+        // width: 50%;
+        font-size: 36px;
+        img {
+            height: 100px;
+        }
+    }
+
+    a {
+        display: inline-block;
+        color: #fff;
+    }
+}
+
+.nav-ls {
+    position: relative;
+    display: flex;
+    width: 50vw;
+    left: 50%;
+    padding: 0 0 2%;
+    font-size: 24px;
+}
+
+.nav-item {
+    margin: 0 5%;
+
+    a {
+        transition: opacity 1s;
+        opacity: 1;
+
+        :hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+// home
+.home {
+    background-color: rgb(14, 28, 79);
+}
+
+.slogan {
+    position: relative;
+    top: 40%;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+// display-walls
+.display-walls {
+    overflow-y: auto;
+}
+
+.display-walls-wrap {
+    column-gap: 15px;
+    column-width: 300px;
+    row-gap: 50px;
+}
+
+.display-walls-box {
+    display: inline-block;
+    width: 350px;
+    margin: 3% 0 0;
+    padding: 2%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    .img-resp {
+        // width: 50%;
+    }
+}
+
+// product
+.product {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    background-image: url(../images/紙張背景.jpg);
+
+}
+
+.wrap {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    padding: 5%;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 #000;
+}
+
+.product-box {
+    display: flex;
+
+    .img-wrap,
+    .product-intro {
+        width: 50%;
+        aspect-ratio: 1;
+    }
+
+    .product-intro {
+        margin-left: 5%;
+    }
+}
+
+.img-wrap {
+    background-color: rgba(14, 28, 79, 0.4);
+}
+
+.product-intro {
+    .product-title {
+        padding-top: 10%;
+        color: rgb(14, 28, 79);
+        font-size: 36px;
+        font-weight: 800;
+    }
+
+    .product-desc {
+        padding-top: 10%;
+        color: rgb(14, 28, 79);
+        font-size: 24px;
+        line-height: 2rem;
+
+    }
+}
+
+.product-arrow {
+    position: relative;
+    vertical-align: middle;
+
+    a {
+        color: rgb(14, 28, 79);
+        font-size: 48px;
+        opacity: 0.3;
+        transition: all .5s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .prev-arrow,
+    .next-arrow {
+        position: relative;
+        display: inline-block;
+        padding: 0 1%;
+    }
+
+    .prev-arrow {
+        float: right;
+    }
+
+    .next-arrow {
+        float: right;
+    }
+}
+
+.product-buttom {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .buttom {
+        width: 10px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: rgb(14, 28, 79);
+        opacity: .3;
+        margin: 0 .5%;
+    }
+}
+
+// contact
+
+.contact {
+    display: flex;
+    height: 20vh;
+    background-color: rgb(14, 28, 79);
+    font-size: 18px;
+    line-height: 1.5;
+    text-transform: uppercase;
+}
+
+.c-logo {
+    width: 40%;
+    font-size: 36px;
+    line-height: 1;
+    span {
+        font-size: 24px;
+    }
+}
+
+.c-product,
+.c-company {
+    width: 30%;
+}
+
+.c-title {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
