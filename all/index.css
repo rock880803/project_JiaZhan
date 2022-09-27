@@ -13,8 +13,10 @@ a {
 section {
   position: relative;
   padding: 5% 20vw;
-  width: 60vw;
-  height: 80vh;
+  width: 80vw;
+  min-height: 80vh;
+  height: auto;
+  overflow-x: hidden;
 }
 
 .img-resp {
@@ -29,18 +31,11 @@ nav {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  width: 100vw;
   top: 0;
   padding: 2% 10% 0;
-  z-index: 1;
+  z-index: 2;
   background-color: rgb(14, 28, 79);
-}
-nav .logo {
-  position: relative;
-  display: inline-block;
-  font-size: 36px;
-}
-nav .logo img {
-  height: 100px;
 }
 nav a {
   display: inline-block;
@@ -50,21 +45,46 @@ nav a {
 .nav-ls {
   position: relative;
   display: flex;
-  width: 50vw;
-  left: 50%;
+  flex-wrap: wrap;
+  width: 100%;
   padding: 0 0 2%;
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+.nav-logo {
+  position: relative;
+  left: 0;
+  width: 50%;
+}
+.nav-logo img {
+  width: 60px;
 }
 
 .nav-item {
-  margin: 0 5%;
+  width: 16%;
+}
+.nav-item:hover ul {
+  display: flex;
 }
 .nav-item a {
-  transition: opacity 1s;
+  transition: opacity 0.5s;
   opacity: 1;
 }
-.nav-item a :hover {
-  opacity: 0.8;
+.nav-item a:hover {
+  opacity: 0.5;
+}
+.nav-item ul {
+  display: none;
+  flex-direction: column;
+  line-height: 30px;
+}
+.nav-item li {
+  padding: 0 0 0 5%;
+  line-height: 36px;
+}
+.nav-item li:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .home {
@@ -83,22 +103,47 @@ nav a {
 }
 
 .display-walls-wrap {
-  -moz-column-gap: 15px;
-       column-gap: 15px;
-  -moz-column-width: 300px;
-       column-width: 300px;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  -moz-column-width: 200px;
+       column-width: 200px;
   row-gap: 50px;
 }
 
 .display-walls-box {
+  position: relative;
   display: inline-block;
-  width: 350px;
+  width: 250px;
   margin: 3% 0 0;
   padding: 2%;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
 }
+.display-walls-box h2 {
+  position: absolute;
+  display: flex;
+  z-index: 1;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 36px;
+  font-weight: 800;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(14, 28, 79, 0.2);
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.display-walls-box h2:hover {
+  opacity: 0;
+}
+
 .product {
   position: relative;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   background-color: rgb(255, 255, 255);
   background-image: url(../images/紙張背景.jpg);
 }
@@ -115,13 +160,13 @@ nav a {
 .product-box {
   display: flex;
 }
-.product-box .img-wrap,
-.product-box .product-intro {
+
+.img-wrap,
+.product-intro {
   width: 50%;
-  aspect-ratio: 1;
-}
-.product-box .product-intro {
   margin-left: 5%;
+  aspect-ratio: 1;
+  box-sizing: border-box;
 }
 
 .img-wrap {
@@ -139,6 +184,22 @@ nav a {
   color: rgb(14, 28, 79);
   font-size: 24px;
   line-height: 2rem;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.product-intro a {
+  display: inline-block;
+  color: #fff;
+  margin-top: 10%;
+  font-size: 18px;
+  padding: 5%;
+  background-color: rgba(14, 28, 79, 0.8);
+  border-radius: 5px;
+}
+.product-intro a:hover {
+  background-color: rgb(14, 28, 79);
 }
 
 .product-arrow {
@@ -184,7 +245,7 @@ nav a {
 
 .contact {
   display: flex;
-  height: 20vh;
+  min-height: 20vh;
   background-color: rgb(14, 28, 79);
   font-size: 18px;
   line-height: 1.5;
