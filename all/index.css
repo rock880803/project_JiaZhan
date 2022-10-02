@@ -25,6 +25,10 @@ section {
   vertical-align: bottom;
 }
 
+.mask {
+  overflow: hidden;
+}
+
 nav {
   position: -webkit-sticky;
   position: sticky;
@@ -50,6 +54,7 @@ nav a {
   padding: 0 0 2%;
   font-size: 18px;
   line-height: 60px;
+  text-align: center;
 }
 
 .nav-logo {
@@ -141,9 +146,6 @@ nav a {
 
 .product {
   position: relative;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   background-color: rgb(255, 255, 255);
   background-image: url(../images/紙張背景.jpg);
 }
@@ -157,8 +159,22 @@ nav a {
   box-shadow: 0 0 5px 0 #000;
 }
 
+.product-mask {
+  position: relative;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  height: 50vh;
+  transition: left 0.5s;
+}
+
 .product-box {
   display: flex;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
 }
 
 .img-wrap,
@@ -167,10 +183,6 @@ nav a {
   margin-left: 5%;
   aspect-ratio: 1;
   box-sizing: border-box;
-}
-
-.img-wrap {
-  background-color: rgba(14, 28, 79, 0.4);
 }
 
 .product-intro .product-title {
@@ -184,6 +196,7 @@ nav a {
   color: rgb(14, 28, 79);
   font-size: 24px;
   line-height: 2rem;
+  width: 80%;
   display: -webkit-box;
   overflow: hidden;
   -webkit-line-clamp: 5;
@@ -228,19 +241,22 @@ nav a {
   float: right;
 }
 
-.product-buttom {
+.product-button {
   position: relative;
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.product-buttom .buttom {
+.product-button .button {
   width: 10px;
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: rgb(14, 28, 79);
   opacity: 0.3;
   margin: 0 0.5%;
+}
+.product-button .js-button {
+  opacity: 0.8;
 }
 
 .contact {
@@ -269,4 +285,39 @@ nav a {
 .c-title {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 380px) {
+  section {
+    padding: 5% 12vw;
+    width: 76vw;
+  }
+  .nav-ls {
+    font-size: 12px;
+  }
+  .nav-item {
+    width: 20%;
+    text-align: left;
+  }
+  .nav-item li {
+    line-height: 16px;
+  }
+  .nav-logo {
+    width: 40%;
+  }
+  .display-walls-box {
+    width: auto;
+  }
+  .contact {
+    font-size: 12px;
+    line-height: 1.2;
+  }
+  .c-logo {
+    width: 40%;
+    font-size: 18px;
+    line-height: 1;
+  }
+  .c-logo span {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=index.css.map */
