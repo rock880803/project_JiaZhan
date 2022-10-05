@@ -2,6 +2,7 @@ const $button = $('.button');
 const $prevArrow = $('.prev-arrow');
 const $nextArrow = $('.next-arrow');
 const $productMask = $('.product-mask');
+
 let numBtn = 0;
 
 productDuration = 5000;

@@ -308,9 +308,78 @@ nav a {
   .display-walls-box {
     width: auto;
   }
+  .product .wrap {
+    width: auto;
+  }
+  .product-box {
+    flex-direction: column;
+  }
+  .product-box .img-wrap {
+    width: 100%;
+    overflow: none;
+    margin-left: 0;
+  }
+  .product-box .product-intro {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    aspect-ratio: 0;
+  }
+  .product-box .product-intro h2,
+.product-box .product-intro p {
+    color: #fff;
+  }
+  .product-box .product-intro p {
+    display: none;
+  }
+  .product-button .button {
+    width: 8px;
+    height: 5px;
+    transition: width 0.3s;
+  }
+  .product-button .js-button {
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+    aspect-ratio: 0;
+  }
   .contact {
     font-size: 12px;
     line-height: 1.2;
+  }
+  #detailButton {
+    display: none;
+  }
+  .wrap {
+    padding: 0;
+  }
+  .product-box {
+    aspect-ratio: 1;
+  }
+  .product-mask {
+    height: 45vh;
+  }
+  .product-intro {
+    position: absolute;
+    top: 0;
+    margin-left: 10%;
+  }
+  .product-arrow {
+    display: none;
+  }
+  .img-wrap {
+    padding: 5%;
+  }
+  .img-wrap .img-resp {
+    aspect-ratio: 1;
+  }
+  .product-button {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 10px;
+  }
+  section {
+    min-height: 40vh;
   }
   .c-logo {
     width: 40%;
